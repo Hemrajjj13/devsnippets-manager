@@ -1,7 +1,7 @@
 import { configureStore } from '@reduxjs/toolkit';
 import authReducer from './slices/authSlice';
-import snippetsReducer from './slices/snippetsSlice';
-import { saveSnippetsToStorage } from './slices/snippetsSlice';
+import snippetsReducer from './slices/snippetSlice';
+import { saveSnippetsToStorage } from './slices/snippetSlice';
 
 // Middleware to persist snippets to localStorage
 const localStorageMiddleware = (store) => (next) => (action) => {

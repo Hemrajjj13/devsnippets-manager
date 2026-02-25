@@ -1,6 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
@@ -20,12 +18,34 @@
   background: #94a3b8;
 }
 
-/* Code block styling */
-.code-block {
-  @apply bg-slate-900 text-slate-100 p-4 rounded-lg font-mono text-sm overflow-x-auto;
+/* Custom focus ring */
+:focus-visible {
+  outline: 2px solid #60a5fa;
+  outline-offset: 2px;
 }
 
-/* Language badge */
-.language-badge {
-  @apply inline-block px-3 py-1 rounded-full text-xs font-semibold;
+/* Prevent text selection in code blocks */
+pre, code {
+  -webkit-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+
+/* Smooth transitions */
+* {
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .hidden-sm {
+    display: none;
+  }
+  
+  .text-sm-only {
+    font-size: 0.875rem;
+  }
 }

@@ -1,5 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { saveSnippets } from '../../utils/persistance';
+import { saveSnippets, loadSnippets } from '../../utils/persistance';
+
 
 const initialState = {
   list: [],
@@ -40,16 +41,17 @@ const snippetsSlice = createSlice({
       state.showFavorites = action.payload;
     },
     setSnippets: (state, action) => {
-      state.list = action.payload;
+      state.list = Array.isArray(action.payload) ? action.payload : [];
     },
   },
 });
 
 // Add this after your slice definition
 export const loadSnippetsFromStorage = () => (dispatch) => {
-  const savedSnippets = loadSnippetsFromStorage();
+  const savedSnippets = loadSnippets() || [];
   dispatch(setSnippets(savedSnippets));
 };
+
 
 export const saveSnippetsToStorage = (snippets) => {
   saveSnippets(snippets);
