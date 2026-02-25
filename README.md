@@ -157,7 +157,16 @@ This project demonstrates:
 
 ## 📸 Screenshots
 
-*Add screenshots here for better visibility.*
+## 📸 Screenshots
+
+### Dashboard
+![Dashboard Screenshot](./screenshots/dashboard.png)
+
+### Create Snippet
+![Create Snippet Screenshot](./screenshots/create.png)
+
+### Your Snippets
+![Snippet Detail Screenshot](./screenshots/snippets.png)
 
 ---
 
