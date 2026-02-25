@@ -157,8 +157,6 @@ This project demonstrates:
 
 ## 📸 Screenshots
 
-## 📸 Screenshots
-
 ### Dashboard
 ![Dashboard Screenshot](./screenshots/dashboard.png)
 
